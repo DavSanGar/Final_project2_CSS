@@ -1,0 +1,45 @@
+@use "variables" as v;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+  margin-right: 200px;
+  .ul-header {
+    display: flex;
+    list-style: none;
+    gap: 75px;
+    margin-right: 50px;
+    & a {
+      color: v.$color-font-secondary;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 5px;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: 3px;
+        background-color: v.$color-button;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+      &:hover {
+        color: v.$color-font-primary;
+        &::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+}
+
+.header .a-header {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}

@@ -1,0 +1,13 @@
+@use "variables";
+@use "header";
+@use "hero";
+@use "footer";
+@use "buttons";
+
+@use "variables" as v;
+
+body {
+  font-family: v.$font-primary;
+  font-size: v.$font-size-primary;
+  box-sizing: border-box;
+}
